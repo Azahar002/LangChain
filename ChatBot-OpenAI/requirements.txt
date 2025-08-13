@@ -1,19 +1,34 @@
-langchain
-langchain-openai
-streamlit
-python-dotenv
-langchain_community
-langserve
-fastapi
-uvicorn
-sse_starlette
-bs4
-pypdf
-chromadb
-faiss-cpu
-wikipedia
-groq
-cassio
-beautifulsoup4
-arxiv
-langchainhub
+# --- LangChain core (keep on same minor line) ---
+langchain==0.3.*
+langchain-core==0.3.*
+langchain-community==0.3.*
+langchain-openai==0.3.*
+langserve==0.3.*
+pydantic>=2,<3
+
+# --- Server / utils ---
+fastapi>=0.110,<1
+uvicorn>=0.30,<1
+sse-starlette>=1.8,<2
+python-dotenv>=1,<2
+streamlit>=1.35,<2
+
+# --- Vector stores / data ---
+langchain-chroma>=0.1,<0.2
+chromadb>=0.5
+faiss-cpu>=1.7.4
+
+# --- Data sources / scraping ---
+beautifulsoup4>=4.12
+pypdf>=4,<5
+wikipedia>=1.4,<2
+arxiv>=2,<3
+
+# --- Providers / misc ---
+openai>=1,<2
+groq>=0.10
+cassio>=0.1
+
+# --- Optional / advanced ---
+# langchain-objectbox  # (commented out: often pins to LC 0.2; use a separate venv if needed)
+# langchainhub         # add if you really need it; it’s optional
